@@ -1,8 +1,7 @@
-/// <reference types="next" />
-import { type NextRequest } from 'next/server'
+// Next.jsのAPIルート
 import { client, getInfo } from '@/app/api/utils/common'
 
-export async function POST(request: NextRequest) {
+export async function POST(request: any) {
   try {
     const formData = await request.formData()
     const { user } = getInfo(request)
